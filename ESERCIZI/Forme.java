@@ -1,15 +1,12 @@
 abstract class Forma {
-    
-    abstract double calcolaArea();
+     abstract double calcolaArea();
 }
 
 class Cerchio extends Forma {
     private double raggio;
-    
     public Cerchio(double raggio) {
         this.raggio = raggio;
     }
-    
     @Override
     double calcolaArea() {
         return Math.PI * raggio * raggio;
@@ -18,7 +15,6 @@ class Cerchio extends Forma {
 
 class Rettangolo extends Forma {
     private double base, altezza;
-    
     public Rettangolo(double base, double altezza) {
         this.base = base;
         this.altezza = altezza;
@@ -30,12 +26,9 @@ class Rettangolo extends Forma {
     }
 }
 
-public class es02 {
+public class Forme {
     public static void main(String[] args) {
-      
-        Forma[] forme = { new Cerchio(5), new Rettangolo(4, 5) };
-        
-        
+    Forma[] forme = { new Cerchio(3), new Rettangolo(1, 2) };
         for (Forma forma : forme) {
             System.out.println("Area: " + forma.calcolaArea());
         }
